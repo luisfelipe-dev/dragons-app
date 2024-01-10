@@ -1,5 +1,4 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
-import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 import * as Yup from 'yup'
 
@@ -8,7 +7,7 @@ import { Container } from '@/styles/Grid'
 
 import * as Style from './style'
 
-const LoginPage = ({ onLogin }: any) => {
+const LoginPage = () => {
   // const [username, setUsername] = useState('')
 
   const handleLogin = (value: { username: string }) => {

@@ -1,5 +1,4 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import LoginPage from '@/templates/Login'
 
@@ -7,10 +6,10 @@ import LoginPage from '@/templates/Login'
 // import DragonFormPage from './components/DragonFormPage'
 // import DragonListPage from './components/DragonListPage'
 
-const API_URL = 'http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon'
+// const API_URL = 'http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon'
 
 export function App() {
-  const [loggedIn, setLoggedIn] = useState(false)
+  const [loggedIn] = useState(false)
   // const [username, setUsername] = useState('')
   // const [dragons, setDragons] = useState([])
   // const [selectedDragon, setSelectedDragon] = useState(null)
@@ -68,7 +67,7 @@ export function App() {
           <DragonFormPage onSubmit={handleSubmitDragon} /> */}
         </div>
       ) : (
-        <LoginPage onLogin={() => console.log('oi')} />
+        <LoginPage />
       )}
     </div>
   )

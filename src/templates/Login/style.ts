@@ -74,6 +74,7 @@ export const WrapperLoginPage = styled.div`
         z-index: 1;
         color: var(--color);
         border: 2px solid var(--color);
+        background: transparent;
         border-radius: 6px;
         position: relative;
       }

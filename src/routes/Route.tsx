@@ -5,7 +5,7 @@ type PrivateRouterComponentProps = {
   children: ReactNode
 }
 function PrivateRouterComponent({ children }: PrivateRouterComponentProps) {
-  const jwt = localStorage.getItem('@SnxPayment:token')
+  const jwt = localStorage.getItem('@DragonsApp:token')
   if (!jwt) {
     return <Navigate to={{ pathname: '/' }} />
   }

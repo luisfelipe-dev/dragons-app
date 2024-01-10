@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: '/logado',
+    path: '/list-dragons',
     element: (
       <PrivateRouter>
         <Auth />

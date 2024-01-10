@@ -1,24 +1,37 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import * as Yup from 'yup'
 
 import AnimatedLogo from '@/components/AnimatedLogo'
+import { schemaLogin } from '@/helpers/schemaLogin'
 import { Container } from '@/styles/Grid'
 
 import * as Style from './style'
 
 const LoginPage = () => {
-  // const [username, setUsername] = useState('')
+  const navigate = useNavigate()
 
   const handleLogin = (value: { username: string }) => {
     const { username } = value
 
-    if (username !== 'banguela') {
+    if (username.toLocaleLowerCase() !== 'banguela') {
       toast.error('Senha incorreta', {
         theme: 'colored',
       })
+      return
     }
+
+    localStorage.setItem('@DragonsApp:token', 'banguela')
+    toast.success('Login efetuado com sucesso', {
+      theme: 'colored',
+    })
+    navigate('/list-dragons')
   }
+
+  useEffect(() => {
+    localStorage.removeItem('@DragonsApp:token')
+  }, [])
 
   return (
     <Container>
@@ -31,9 +44,7 @@ const LoginPage = () => {
         <div className="login-form">
           <Formik
             initialValues={{ username: '' }}
-            validationSchema={Yup.object({
-              username: Yup.string().required('Campo Obrigatório'),
-            })}
+            validationSchema={schemaLogin}
             onSubmit={handleLogin}
           >
             <Form>
@@ -58,7 +69,7 @@ const LoginPage = () => {
               />
 
               <div className="login-form__right">
-                <button type="submit">Submit</button>
+                <button type="submit">Entrar</button>
               </div>
             </Form>
           </Formik>

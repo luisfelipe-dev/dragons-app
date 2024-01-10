@@ -77,31 +77,29 @@ export const WrapperLoginPage = styled.div`
         background: transparent;
         border-radius: 6px;
         position: relative;
-      }
 
-      button::before {
-        position: absolute;
-        content: '';
-        background: var(--color);
-        width: 150px;
-        height: 200px;
-        z-index: -1;
-        border-radius: 50%;
-      }
+        &::before {
+          position: absolute;
+          content: '';
+          background: var(--color);
+          width: 150px;
+          height: 200px;
+          z-index: -1;
+          border-radius: 50%;
 
-      button:hover {
-        color: white;
-      }
+          top: 100%;
+          left: 100%;
+          transition: 0.3s all;
+        }
 
-      button:before {
-        top: 100%;
-        left: 100%;
-        transition: 0.3s all;
-      }
+        &:hover {
+          color: white;
 
-      button:hover::before {
-        top: -30px;
-        left: -30px;
+          &::before {
+            top: -30px;
+            left: -30px;
+          }
+        }
       }
     }
   }

@@ -1,10 +1,12 @@
-import React from 'react'
 import Lottie from 'react-lottie'
 
-// import { Container } from './styles';
 import logoAnimation from '../../assets/logo-animation.json'
 
-const AnimatedLogo: React.FC = () => {
+type AnimatedLogoProps = {
+  width: number
+  height: number
+}
+const AnimatedLogo = ({ width, height }: AnimatedLogoProps) => {
   const loadingOptions = {
     loop: true,
     autoplay: true,
@@ -14,7 +16,7 @@ const AnimatedLogo: React.FC = () => {
     },
   }
 
-  return <Lottie width={120} height={120} options={loadingOptions} />
+  return <Lottie width={width} height={height} options={loadingOptions} />
 }
 
 export default AnimatedLogo

@@ -16,7 +16,7 @@ const LoginPage = () => {
     const { username } = value
 
     if (username.toLocaleLowerCase() !== 'banguela') {
-      toast.error('Senha incorreta', {
+      toast.error('Username incorreto', {
         theme: 'colored',
       })
       return
@@ -37,7 +37,7 @@ const LoginPage = () => {
     <Container>
       <Style.WrapperLoginPage>
         <div className="login-title">
-          <AnimatedLogo />
+          <AnimatedLogo width={120} height={120} />
           <h1>Dragons App</h1>
         </div>
 

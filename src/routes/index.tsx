@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import { App } from '@/pages/app'
-import { Auth } from '@/pages/auth'
+import { ListDragonsPage } from '@/pages/list-dragons'
 import { PrivateRouter } from '@/routes/Route'
 
 export const router = createBrowserRouter([
@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
     path: '/list-dragons',
     element: (
       <PrivateRouter>
-        <Auth />
+        <ListDragonsPage />
       </PrivateRouter>
     ),
   },

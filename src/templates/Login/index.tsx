@@ -51,7 +51,7 @@ const LoginPage = () => {
               <Field name="username">
                 {({ field, meta }: any) => (
                   <>
-                    <label>Username:</label>
+                    <label htmlFor="username">Username:</label>
                     <input
                       type="text"
                       placeholder="Username"

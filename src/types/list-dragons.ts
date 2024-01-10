@@ -1,4 +1,4 @@
-export type listDragons = {
+export type listDragonsProps = {
   createdAt: string
   histories: string
   id: string

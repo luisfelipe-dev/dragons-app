@@ -5,11 +5,18 @@ import { Container } from '@/styles/Grid'
 import AnimatedLogo from '../AnimatedLogo'
 import * as Style from './style'
 
-export function Header() {
+type HeaderProps = {
+  showRegisterBtn?: boolean
+}
+
+export function Header({ showRegisterBtn }: HeaderProps) {
   const navigate = useNavigate()
   const handleLogout = () => {
     localStorage.removeItem('@DragonsApp:token')
     navigate('/')
+  }
+  const handleCreateDragon = () => {
+    navigate('/create-dragon')
   }
 
   return (
@@ -20,7 +27,9 @@ export function Header() {
         </div>
 
         <div className="header-btns">
-          <button onClick={() => alert('CADASTRAR')}>Cadastrar Dragão</button>
+          {showRegisterBtn && (
+            <button onClick={handleCreateDragon}>Cadastrar Dragão</button>
+          )}
           <button onClick={handleLogout}>Sair</button>
         </div>
       </Style.WrapperHeader>

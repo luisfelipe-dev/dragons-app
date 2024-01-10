@@ -52,6 +52,7 @@ export const WrapperLoginPage = styled.div`
       input {
         width: 100%;
         padding: 16px;
+        font-size: 16px;
         margin-bottom: 16px;
         border-radius: 16px;
         border: 1px solid var(--color);

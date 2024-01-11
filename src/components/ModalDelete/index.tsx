@@ -1,6 +1,7 @@
 import { CgClose } from 'react-icons/cg'
 import Lottie from 'react-lottie'
 import Modal from 'react-modal'
+import { toast } from 'react-toastify'
 
 import API from '@/services/api'
 
@@ -38,6 +39,9 @@ export function ModalDelete({
 
       closeModal()
       getListDragons()
+      toast.success('Dragão deletado com sucesso', {
+        theme: 'colored',
+      })
       return response
     } catch (err) {
       console.log(err)

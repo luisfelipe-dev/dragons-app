@@ -15,6 +15,7 @@ import * as Style from './style'
 export function EditDragon() {
   const [loading, setLoading] = useState(true)
   const [infosDragon, setInfosDragon] = useState<EditDragonProps>({
+    createdAt: '',
     name: '',
     type: '',
     histories: [],
@@ -42,12 +43,22 @@ export function EditDragon() {
       const response = await API.get(`/dragon/${id}`)
       const { data } = response
 
+      const inputDate = new Date(data.createdAt)
+      const formattedDate = `${('0' + inputDate.getUTCDate()).slice(-2)}/${(
+        '0' +
+        (inputDate.getUTCMonth() + 1)
+      ).slice(-2)}/${inputDate.getUTCFullYear()}`
+
       if (Array.isArray(data.histories)) {
-        const modifiedData = { ...data, histories: '' }
+        const modifiedData = {
+          ...data,
+          histories: '',
+          createdAt: formattedDate,
+        }
 
         setInfosDragon(modifiedData)
       } else {
-        setInfosDragon(data)
+        setInfosDragon({ ...data, createdAt: formattedDate })
       }
 
       setTimeout(() => {
@@ -90,6 +101,10 @@ export function EditDragon() {
               >
                 {({ isSubmitting }) => (
                   <Form>
+                    <div className="form-div">
+                      <label htmlFor="date">Data de criação</label>
+                      <p>{infosDragon.createdAt}</p>
+                    </div>
                     <div className="form-div">
                       <Field name="name">
                         {({ field, meta }: any) => (

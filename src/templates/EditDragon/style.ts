@@ -25,6 +25,11 @@ export const WrapperEditDragon = styled.div`
       margin-bottom: 16px;
     }
 
+    p {
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
     button {
       cursor: pointer;
       width: 100%;

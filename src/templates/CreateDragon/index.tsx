@@ -6,7 +6,6 @@ import { Header } from '@/components/Header'
 import { schemaEdit } from '@/helpers/schemaEdit'
 import API from '@/services/api'
 import { Container } from '@/styles/Grid'
-import { EditDragonProps } from '@/types/edit-dragon'
 
 import * as Style from './style'
 

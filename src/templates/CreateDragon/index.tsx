@@ -17,9 +17,13 @@ export function CreateDragon() {
     navigate('/list-dragons')
   }
 
-  const handleCreateDragon = async (e: EditDragonProps) => {
+  const handleCreateDragon = async (value: {
+    name: string
+    type: string
+    histories: string
+  }) => {
     try {
-      const response = await API.post('/dragon', e)
+      const response = await API.post('/dragon', value)
 
       navigate('/list-dragons')
       return response
@@ -126,7 +130,7 @@ export function CreateDragon() {
 
                 <div className="login-form__right">
                   <button type="submit" disabled={isSubmitting}>
-                    Editar
+                    Criar
                   </button>
                 </div>
               </Form>

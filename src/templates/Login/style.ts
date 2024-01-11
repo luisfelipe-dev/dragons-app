@@ -24,8 +24,6 @@ export const WrapperLoginPage = styled.div`
 
   .login-form {
     width: 100%;
-    --color: #2b2d42;
-    --colorError: #ef233c;
 
     .login-form__right {
       width: 100%;
@@ -40,7 +38,7 @@ export const WrapperLoginPage = styled.div`
         top: 13px;
         right: 3px;
         font-size: 0.75rem;
-        color: var(--colorError);
+        color: var(--red-300);
       }
 
       label {
@@ -55,10 +53,10 @@ export const WrapperLoginPage = styled.div`
         font-size: 16px;
         margin-bottom: 16px;
         border-radius: 16px;
-        border: 1px solid var(--color);
+        border: 1px solid var(--default-color);
 
         &.error-id {
-          border-color: var(--colorError);
+          border-color: var(--red-300);
         }
       }
 
@@ -73,8 +71,8 @@ export const WrapperLoginPage = styled.div`
         cursor: pointer;
         font-size: 17px;
         z-index: 1;
-        color: var(--color);
-        border: 2px solid var(--color);
+        color: var(--default-color);
+        border: 2px solid var(--default-color);
         background: transparent;
         border-radius: 6px;
         position: relative;
@@ -82,7 +80,7 @@ export const WrapperLoginPage = styled.div`
         &::before {
           position: absolute;
           content: '';
-          background: var(--color);
+          background: var(--default-color);
           width: 150px;
           height: 200px;
           z-index: -1;

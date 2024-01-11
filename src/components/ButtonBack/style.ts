@@ -6,14 +6,14 @@ export const WrapperButtonBack = styled.div`
 
   button {
     appearance: none;
-    background-color: #fafbfc;
+    background-color: var(--bg-button-back);
     border: 1px solid rgba(27, 31, 35, 0.15);
     border-radius: 6px;
     box-shadow:
       rgba(27, 31, 35, 0.04) 0 1px 0,
       rgba(255, 255, 255, 0.25) 0 1px 0 inset;
     box-sizing: border-box;
-    color: #24292e;
+    color: var(--color-button-back);
     cursor: pointer;
     display: inline-block;
     font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial,
@@ -33,20 +33,20 @@ export const WrapperButtonBack = styled.div`
     word-wrap: break-word;
 
     &:hover {
-      background-color: #f3f4f6;
+      background-color: var(--bg-button-back-hover);
       text-decoration: none;
       transition-duration: 0.1s;
     }
 
     &:disabled {
-      background-color: #fafbfc;
+      background-color: var(--bg-button-back);
       border-color: rgba(27, 31, 35, 0.15);
-      color: #959da5;
+      color: var(--disabled-color);
       cursor: default;
     }
 
     &:active {
-      background-color: #edeff2;
+      background-color: var(--bg-button-back-v2);
       box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
       transition: none 0s;
     }

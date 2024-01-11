@@ -2,10 +2,33 @@ import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   ${() => css`
+    :root {
+      --bg-button-back: #fafbfc;
+      --bg-button-back-v2: #edeff2;
+      --color-button-back: #24292e;
+      --bg-button-back-hover: #f3f4f6;
+      --disabled-color: #959da5;
+      --white: #fff;
+      --default-color: #2b2d42;
+      --secondary-color: #8d99ae;
+      --default-color-v2: #2b2d42;
+      --default-color-v3: #24292e;
+      --default-color-v4: #edeff2;
+      --orange-300: #ff9914;
+      --orange-500: #ff8f00;
+      --orange-700: #ff6e00;
+      --orange-900: #ff4d00;
+      --red-300: #ef233c;
+      --red-500: #f44336;
+      --green-300: #52c41a;
+      --gray-300: #ccc;
+    }
     html,
     body {
       background: #f4f4f4;
-      color: #2b2d42;
+      color: var(--default-color);
+      height: 100%;
+      width: 100%;
       box-sizing: border-box;
       padding: 0;
       margin: 0;

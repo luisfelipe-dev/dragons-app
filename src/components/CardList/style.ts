@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const WrapperCardList = styled.div`
   width: 100%;
-  background: #fff;
+  background: var(--white);
   padding: 16px;
   border-radius: 16px;
 
@@ -40,11 +40,11 @@ export const WrapperCardList = styled.div`
     strong {
       margin-bottom: 5px;
       font-size: 1rem;
-      color: #2b2d42;
+      color: var(--default-color);
     }
 
     font-size: 0.875rem;
-    color: #8d99ae;
+    color: var(--secondary-color);
   }
 
   button {
@@ -57,12 +57,12 @@ export const WrapperCardList = styled.div`
     transition: all 0.3s ease;
 
     &.edit {
-      background: #ff9914;
+      background: var(--orange-300);
     }
 
     &.delete {
-      background: #ef233c;
-      color: #fff;
+      background: var(--red-300);
+      color: var(--white);
     }
 
     &:hover {

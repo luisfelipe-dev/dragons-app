@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const WrapperModalDelete = styled.div`
   width: 100%;
   max-width: 350px;
-  background: #fff;
+  background: var(--white);
   padding: 24px 16px;
   border-radius: 16px;
 
@@ -58,10 +58,10 @@ export const WrapperModalDelete = styled.div`
         cursor: pointer;
 
         border-radius: 6px;
-        background: #ef233c;
-        color: #fff;
+        background: var(--red-300);
+        color: var(--white);
         &.accept {
-          background: #52c41a;
+          background: var(--green-300);
         }
       }
     }

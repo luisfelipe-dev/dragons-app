@@ -5,9 +5,6 @@ export const WrapperCreateDragon = styled.div`
   max-width: 400px;
   margin: 16px auto 0 auto;
 
-  --color: #2b2d42;
-  --colorError: #ef233c;
-
   form {
     .form-div {
       width: 100%;
@@ -19,7 +16,7 @@ export const WrapperCreateDragon = styled.div`
       top: 13px;
       right: 3px;
       font-size: 0.75rem;
-      color: var(--colorError);
+      color: var(--red-300);
     }
 
     label {
@@ -35,9 +32,9 @@ export const WrapperCreateDragon = styled.div`
       font-size: 18px;
       font-weight: 600;
       border-radius: 6px;
-      border: 1px solid #2b2d42;
-      background: var(--color);
-      color: #fff;
+      border: 1px solid var(--default-color);
+      background: var(--default-color);
+      color: var(--white);
 
       &:hover {
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
@@ -45,7 +42,7 @@ export const WrapperCreateDragon = styled.div`
       }
 
       &:disabled {
-        background: #ccc;
+        background: var(--gray-300);
         opacity: 0.8;
       }
     }
@@ -56,11 +53,11 @@ export const WrapperCreateDragon = styled.div`
       font-size: 16px;
       margin-bottom: 16px;
       border-radius: 16px;
-      border: 1px solid var(--color);
+      border: 1px solid var(--default-color);
       outline: 0;
 
       &.error-id {
-        border-color: var(--colorError);
+        border-color: var(--red-300);
       }
     }
   }
